@@ -1,0 +1,106 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Damion&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+:root { /*variaveis de css*/
+    --font1: Verdana, Geneva, Tahoma, sans-serif;
+    --font2: 'Sriracha', cursive;
+    --font3: 'Damion' , cursive;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body {
+    background-color: darkgray;
+    min-height: 100vh;
+    font-family: var(--font1);
+    
+    /*tamanho minimo da minha viewport*/
+}
+
+header {
+    background-color: black;
+    color: whitesmoke;
+    text-align: center;
+    /*centralizou todo cabeçario*/
+}
+
+header>h1 {
+    padding-top: 50px;
+    font-family: var(--font3);
+    font-variant: small-caps;
+    font-size: 10vw; /*largura da tela width*/
+    /*meio q deixa todo o texto em maiusculo mas com as primeiras letras mais destacadas, diferente do text-transform uppercase q dxa td gritante*/
+
+}
+
+header>p {
+    /*é o paragrafo que ta o nome do autor*/
+    padding-bottom: 50px;
+    /*somando com o padding top do h1, deixou o cabeçario mais simetrico com 50 px top e bottom*/
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    /*tira o sublinhado do link*/
+    font-weight: bolder;
+    /*fonte*/
+
+}
+
+a:hover {
+    text-decoration: underline;
+    /*ao passar o mouse no link ficará sublinhado*/
+}
+
+section { /*criou o espaço necessario entre os poemas, onde q vai estar entrando as iamgens para o efeito paralax*/
+   padding: 10vh 0 10vh 30px;
+    line-height: 2em; /*espaçamento entre as frases*/
+    font-family: var(--font2);
+    font-size: 3.3vw;
+    
+}
+section >p {
+    padding-bottom: 1.5em;
+}
+
+section.normal {
+    background-color: white;
+    color: black;
+}
+
+section.image {
+    background-color: rgb(53, 53, 53);
+    color: white;
+    background-size: cover;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.664);
+    background-attachment: fixed; /*o paralax*/
+}
+section.image > p { /*criamos uma caixa pra quando for adicionada imagem no fundo, não confundir as caixas*/
+    background-color: rgba(0, 0, 0, 0.11);
+    display: inline-block; /*se adaptou ao conteudo da caixa*/
+    padding: 5px;
+    text-shadow: 1px 1px 0px black; /*sombra no texto dos paragrafos*/
+    
+}
+
+#img01{
+    background-image: url(/imagens/background001.jpg);
+    background-position: right center;
+    
+}
+#img02{
+background-image: url(imagens/background002.jpg);
+background-position: right center;
+
+}
+
+footer {
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 10px;
+
+}
